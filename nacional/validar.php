@@ -4,8 +4,8 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 // Configuración de PostgreSQL (Railway)
-$host = 'postgres.railway.internal';
-$port = '5432';
+$host = 'gondola.proxy.rlwy.net';
+$port = '19875';
 $dbname = 'railway';
 $user = 'postgres';
 $password = 'njmkBQvvWAixyTXYRjccqQoHKGlEoeaE';
