@@ -4,7 +4,7 @@ use Firebase\JWT\JWT;
 
 // Simulamos base de datos con un solo usuario para prueba
 $usuarios = [
-    '20343124806' => [
+    '20343124806' => [ // CUIL
         'nombre' => 'Juan',
         'apellido' => 'Pérez',
         'email' => 'juan.perez@provincia.gob.ar',
@@ -12,10 +12,12 @@ $usuarios = [
     ]
 ];
 
+// Si se envió el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cuil_usuario = $_POST['cuil'] ?? '';
     $password = $_POST['password'] ?? '';
 
+    // Validamos que el CUIL exista y que la contraseña coincida
     if (isset($usuarios[$cuil_usuario]) && $password === $cuil_usuario) {
         $datos = $usuarios[$cuil_usuario];
 
@@ -25,12 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'apellido' => $datos['apellido'],
             'email' => $datos['email'],
             'login' => $cuil_usuario,
-            'exp' => time() + 300
+            'exp' => time() + 300 // expira en 5 minutos
         ];
 
         $clave_secreta = 'clave_super_segura';
         $token = JWT::encode($payload, $clave_secreta, 'HS256');
-        $url_redireccion = "http://localhost:8000/nacional/validar.php?token=$token";
+       $url_redireccion = "https://renpe-production.up.railway.app/nacional/validar.php?token=$token";
+
         header("Location: $url_redireccion");
         exit;
     } else {
@@ -38,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
+<!-- HTML del formulario -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
