@@ -3,8 +3,14 @@ require '../vendor/autoload.php';
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
+// Configuración de PostgreSQL (Railway)
+$host = 'postgres.railway.internal';
+$port = '5432';
+$dbname = 'railway';
+$user = 'postgres';
+$password = 'njmkBQvvWAixyTXYRjccqQoHKGlEoeaE';
+
 $clave_secreta = 'clave_super_segura';
-$token_usados_file = __DIR__ . '/tokens_usados.json';
 
 if (!isset($_GET['token'])) {
     die("Token no proporcionado");
@@ -14,17 +20,30 @@ $token = $_GET['token'];
 
 try {
     $datos = JWT::decode($token, new Key($clave_secreta, 'HS256'));
-
     $jti = $datos->jti ?? null;
-    $tokens_usados = file_exists($token_usados_file) ? json_decode(file_get_contents($token_usados_file), true) : [];
 
-    if (!$jti || in_array($jti, $tokens_usados)) {
-        die("Token ya fue utilizado o inválido.");
+    if (!$jti) {
+        die("Token inválido: no tiene jti");
     }
 
-    $tokens_usados[] = $jti;
-    file_put_contents($token_usados_file, json_encode($tokens_usados));
+    // Conectar a PostgreSQL
+    $conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Verificar si el jti ya fue usado
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM tokens_usados WHERE jti = :jti");
+    $stmt->execute([':jti' => $jti]);
+    $usado = $stmt->fetchColumn();
+
+    if ($usado > 0) {
+        die("Este token ya fue utilizado.");
+    }
+
+    // Registrar el jti
+    $stmt = $conn->prepare("INSERT INTO tokens_usados (jti) VALUES (:jti)");
+    $stmt->execute([':jti' => $jti]);
+
+    // Mostrar datos
     echo "<h2>Bienvenido, {$datos->nombre} {$datos->apellido}</h2>";
     echo "<p>Email: {$datos->email}</p>";
     echo "<p>ID de usuario: {$datos->user_id}</p>";
