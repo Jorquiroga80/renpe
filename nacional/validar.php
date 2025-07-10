@@ -10,7 +10,6 @@ $dbname = 'railway';
 $user = 'postgres';
 $password = 'hLueOYLZyBLtbPkHWmXLScNRgzsUUelw';
 
-
 $clave_secreta = 'clave_super_segura';
 
 if (!isset($_GET['token'])) {
@@ -43,6 +42,22 @@ try {
     // Registrar el jti
     $stmt = $conn->prepare("INSERT INTO tokens_usados (jti) VALUES (:jti)");
     $stmt->execute([':jti' => $jti]);
+
+    // ✅ Registrar acceso en CSV
+    $log_file = __DIR__ . '/log_ingresos.csv';
+    $fecha = date("Y-m-d H:i:s");
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'IP_desconocida';
+    $user_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'Desconocido';
+    $fila = [
+        $fecha,
+        $datos->user_id ?? '',
+        $datos->nombre ?? '',
+        $datos->apellido ?? '',
+        implode(" - ", $datos->CUE ?? []),
+        $ip,
+        $user_agent
+    ];
+    file_put_contents($log_file, implode(";", $fila) . "\n", FILE_APPEND);
 
     // Mostrar datos
     echo "<h2>Bienvenido, {$datos->nombre} {$datos->apellido}</h2>";
