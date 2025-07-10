@@ -2,7 +2,7 @@
 require '../vendor/autoload.php';
 use Firebase\JWT\JWT;
 
-// ✅ Cargar usuarios desde archivo JSON
+// Cargar usuarios desde JSON
 $usuarios = json_decode(file_get_contents(__DIR__ . '/usuarios.json'), true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -34,3 +34,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso Provincial RENPE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-md-6">
+            <div class="card shadow border-0 rounded-4">
+                <div class="card-body p-5">
+                    <h2 class="mb-4 text-center">Ingreso al sistema provincial</h2>
+                    <?php if (isset($error)): ?>
+                        <div class="alert alert-danger"><?= $error ?></div>
+                    <?php endif; ?>
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="cuil" class="form-label">CUIL</label>
+                            <input type="text" class="form-control" name="cuil" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña (CUIL nuevamente)</label>
+                            <input type="password" class="form-control" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted text-center small">
+                    RENPE · Ministerio de Educación
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
