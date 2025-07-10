@@ -6,186 +6,207 @@
     "cue": [
       "1800000"
     ],
-    "rol": "admin"
+    "rol": "admin",
+    "login": "00000000000"
   },
   "23236614484": {
-    "nombre": "Cándido",
-    "apellido": "Iniesta",
-    "email": "preyes@lobato-vergara.com",
+    "nombre": "Cirino",
+    "apellido": "Batlle",
+    "email": "clementinabarrios@millan.es",
     "cue": [
-      "1807304"
+      "1801380"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "23236614484"
   },
   "23474554379": {
-    "nombre": "Bernabé",
-    "apellido": "Almagro",
-    "email": "vgrande@hervas-puente.es",
+    "nombre": "Estefanía",
+    "apellido": "Larrañaga",
+    "email": "maria-belen91@hotmail.com",
     "cue": [
-      "1800620"
+      "1801828"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "23474554379"
   },
   "21550853863": {
-    "nombre": "Rico",
-    "apellido": "Miró",
-    "email": "fpou@serna.com",
+    "nombre": "Amaro",
+    "apellido": "Palacio",
+    "email": "gertrudispalomares@gual.net",
     "cue": [
-      "1802211"
+      "1803297"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "21550853863"
   },
   "20736708182": {
-    "nombre": "Gonzalo",
-    "apellido": "Barros",
-    "email": "chuygarmendia@gmail.com",
+    "nombre": "Fabiola",
+    "apellido": "Robles",
+    "email": "nataliatorrijos@millan-cuenca.es",
     "cue": [
-      "1808224"
+      "1808193"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "20736708182"
   },
   "24105060228": {
-    "nombre": "Carmelo",
-    "apellido": "Cañizares",
-    "email": "cruzabascal@samper-lillo.org",
+    "nombre": "Ileana",
+    "apellido": "Carro",
+    "email": "bustamanteadrian@yahoo.com",
     "cue": [
-      "1802808"
+      "1803462"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "24105060228"
   },
   "24563776539": {
-    "nombre": "Roldán",
-    "apellido": "Mate",
-    "email": "pdiez@hotmail.com",
+    "nombre": "Ester",
+    "apellido": "Escrivá",
+    "email": "aureliobarbero@yahoo.com",
     "cue": [
-      "1808433"
+      "1806360"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "24563776539"
   },
   "25942958976": {
-    "nombre": "Marcia",
-    "apellido": "Francisco",
-    "email": "xgarzon@yahoo.com",
+    "nombre": "Gaspar",
+    "apellido": "Segarra",
+    "email": "natalio41@hotmail.com",
     "cue": [
-      "1805146"
+      "1802723"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "25942958976"
   },
   "21270517264": {
-    "nombre": "Baldomero",
-    "apellido": "Planas",
-    "email": "usoler@torralba.es",
+    "nombre": "Pío",
+    "apellido": "Torrent",
+    "email": "higuerascharo@hotmail.com",
     "cue": [
-      "1807935"
+      "1802397"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "21270517264"
   },
   "29846447454": {
-    "nombre": "Lucas",
-    "apellido": "Lobo",
-    "email": "carla05@romero-fortuny.org",
+    "nombre": "Ciríaco",
+    "apellido": "Sotelo",
+    "email": "apuga@alvarez.es",
     "cue": [
-      "1807691"
+      "1802558"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "29846447454"
   },
   "28431385019": {
-    "nombre": "Chema",
-    "apellido": "Bejarano",
-    "email": "emiliabuendia@sotelo-sanchez.es",
+    "nombre": "Demetrio",
+    "apellido": "Aroca",
+    "email": "taniapizarro@vicens-marin.com",
     "cue": [
-      "1808596"
+      "1805490"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "28431385019"
   },
   "25436060089": {
-    "nombre": "Ale",
-    "apellido": "Sebastián",
-    "email": "ceciliocarreras@araujo.es",
+    "nombre": "Martina",
+    "apellido": "Palau",
+    "email": "ratienza@urena.com",
     "cue": [
-      "1808446"
+      "1808256"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "25436060089"
   },
   "26790320882": {
-    "nombre": "Francisco Jose",
-    "apellido": "Abascal",
-    "email": "uribeamado@manuel-huertas.es",
+    "nombre": "Amador",
+    "apellido": "Maestre",
+    "email": "pcortes@gmail.com",
     "cue": [
-      "1808455"
+      "1802294"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "26790320882"
   },
   "28464803340": {
-    "nombre": "Emma",
-    "apellido": "Campo",
-    "email": "amadadieguez@yahoo.com",
+    "nombre": "Rosendo",
+    "apellido": "Duran",
+    "email": "eladio20@yahoo.com",
     "cue": [
-      "1807559"
+      "1804939"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "28464803340"
   },
   "28292234804": {
-    "nombre": "Primitivo",
-    "apellido": "Bosch",
-    "email": "crespovera@gmail.com",
+    "nombre": "Azucena",
+    "apellido": "Carlos",
+    "email": "qiglesia@zamorano-pombo.es",
     "cue": [
-      "1807982"
+      "1804075"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "28292234804"
   },
   "24307412347": {
-    "nombre": "Cecilia",
-    "apellido": "Palacios",
-    "email": "jose-angelarco@caceres.es",
+    "nombre": "Pilar",
+    "apellido": "Acero",
+    "email": "calvodomingo@contreras-mir.es",
     "cue": [
-      "1807456"
+      "1801961"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "24307412347"
   },
   "29072586119": {
-    "nombre": "Eliana",
-    "apellido": "Morante",
-    "email": "jeronimoramon@gmail.com",
+    "nombre": "Beatriz",
+    "apellido": "Benavides",
+    "email": "concepcion79@gmail.com",
     "cue": [
-      "1808700"
+      "1806488"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "29072586119"
   },
   "24747905167": {
-    "nombre": "Joan",
-    "apellido": "Tejedor",
-    "email": "martaquerol@yahoo.com",
+    "nombre": "Joaquín",
+    "apellido": "Teruel",
+    "email": "emelinagual@yahoo.com",
     "cue": [
-      "1800689"
+      "1800312"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "24747905167"
   },
   "23060295580": {
-    "nombre": "Juan",
-    "apellido": "Porcel",
-    "email": "regueraclarisa@hotmail.com",
+    "nombre": "Leoncio",
+    "apellido": "Querol",
+    "email": "wparejo@espejo.com",
     "cue": [
-      "1806464"
+      "1800189"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "23060295580"
   },
   "27318557787": {
-    "nombre": "Dionisio",
-    "apellido": "Roldan",
-    "email": "rosadoamancio@bertran-aguilo.org",
+    "nombre": "Paco",
+    "apellido": "Carranza",
+    "email": "aitor50@galan.com",
     "cue": [
-      "1807081"
+      "1807783"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "27318557787"
   },
   "27522059554": {
-    "nombre": "Ernesto",
-    "apellido": "Ramis",
-    "email": "luqueeloy@yahoo.com",
+    "nombre": "Leandro",
+    "apellido": "Tomé",
+    "email": "adoraugarte@hotmail.com",
     "cue": [
-      "1805645"
+      "1803664"
     ],
-    "rol": "usuario"
+    "rol": "usuario",
+    "login": "27522059554"
   }
 }
