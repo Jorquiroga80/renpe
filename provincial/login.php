@@ -2,15 +2,8 @@
 require '../vendor/autoload.php';
 use Firebase\JWT\JWT;
 
-$usuarios = [
-    '20343124806' => [
-        'nombre' => 'Juan',
-        'apellido' => 'Pérez',
-        'email' => 'juan.perez@provincia.gob.ar',
-        'cuil' => '20343124806',
-        'cue' => ['1800123', '1800456']
-    ]
-];
+// ✅ Cargar usuarios desde archivo JSON
+$usuarios = json_decode(file_get_contents(__DIR__ . '/usuarios.json'), true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cuil_usuario = $_POST['cuil'] ?? '';
@@ -25,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'nombre' => $datos['nombre'],
             'apellido' => $datos['apellido'],
             'email' => $datos['email'],
-            'login' => $cuil_usuario,
             'CUE' => $datos['cue'],
+            'rol' => $datos['rol'],
             'jti' => $jti,
             'exp' => time() + 300
         ];
@@ -41,23 +34,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Provincial RENPE</title>
-</head>
-<body>
-    <h2>Ingreso al sistema provincial - RENPE</h2>
-    <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
-    <form method="POST" action="">
-        <label for="cuil">CUIL:</label><br>
-        <input type="text" name="cuil" required><br><br>
-
-        <label for="password">Contraseña (CUIL nuevamente):</label><br>
-        <input type="password" name="password" required><br><br>
-
-        <input type="submit" value="Ingresar">
-    </form>
-</body>
-</html>
